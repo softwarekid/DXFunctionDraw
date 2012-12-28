@@ -81,6 +81,7 @@ private:
 
 	void DrawInitialize();
 
+	void ReleaseNodeMemory();
 	
 	
 

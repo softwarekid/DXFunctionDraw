@@ -9,6 +9,10 @@
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <crtdbg.h>
+
 #include "DXUT.h"
 #include <stdlib.h>
 #include "DXUTcamera.h"
@@ -22,7 +26,7 @@
 #include "Box.h"
 
 // Define the obj file to be read from
-#define MESHFILEPATH L"media\\bunny.obj"
+#define MESHFILEPATH L"media\\pawn.obj"
 
 
 #define MAX_RASTERIZER_MODES 6
@@ -469,7 +473,7 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
     // Render the mesh
     //
 	// Stop render the loader mesh
-	bool drawLoaderMesh = true;
+	bool drawLoaderMesh = false;
 	if (drawLoaderMesh) {
 		if ( iCurSubset == -1 )
 		{
@@ -500,7 +504,11 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
 
 	pd3dDevice->OMSetBlendState(g_TransparentBS, blendFactor, 0xffffffff);
 	//g_pBox->draw();
-	g_AABBConstructor->DrawLevel(g_CurrentAABBLevel);
+	bool drawAABBLevel=false;
+	if (drawAABBLevel){
+		g_AABBConstructor->DrawLevel(g_CurrentAABBLevel);
+	}
+	
 	//g_AABBConstructor->DrawAllAABBDetial();
 
 	//

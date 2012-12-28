@@ -47,19 +47,31 @@ txAABBConstructor::~txAABBConstructor(void)
 		delete m_pAABBDrawLevels[i];
 		m_pAABBDrawLevels[i] = NULL;
 	}
+
+	ReleaseNodeMemory();
 }
 
-
+// In the recursion function we want modify the content of the root pointer
+// reference so we must pass a point reference to make effect
+// like the root = new txBoundingBoxNode;
+// actually it's not necessary to do with indices
+// indices do not need pass a pinter reference, because both indices and 
+// the copy of indices by the function parameter is point to the same address
+// that is to say the std::vector<size_t>
 void txAABBConstructor::ConstructAABBTree(txBoundingBoxNode *&root, 
 	std::vector<size_t> *&indices)
 {
 	if (indices->size()==0){
 		root = NULL;
+		// fix a memeory leak problem
+		delete indices;
+		indices = NULL;
 		return;
 	}
 	if (indices->size()==1){
 		root = new txBoundingBoxNode;
 		root->m_pIndices = indices;
+		root->m_pMiddleIndices = NULL;
 		ComputeAABB(*indices, root->aabb);
 		root->left = NULL;
 		root->right = NULL;
@@ -244,6 +256,42 @@ void txAABBConstructor::DrawAllAABBDetial()
 		if (m_AABBTreeLevels[i]->left==NULL&&m_AABBTreeLevels[i]->right==NULL){
 			m_pAABBDrawLevels[i]->draw();
 		}
+	}
+}
+
+void txAABBConstructor::ReleaseNodeMemory(){
+	// mRoot;
+	std::vector<txBoundingBoxNode*> level;
+	std::vector<txBoundingBoxNode*> currentLevel;
+	level.push_back(mRoot);
+
+	txBoundingBoxNode* itemInLevel;
+
+	while (level.size()>0){
+		for (size_t i=0; i<level.size(); i++){
+			itemInLevel = level[i];
+			if (itemInLevel){
+				if (itemInLevel->left){
+					currentLevel.push_back(itemInLevel->left);
+				}
+				if (itemInLevel->right){
+					currentLevel.push_back(itemInLevel->right);
+				}
+				if (level[i]->m_pIndices){
+					delete level[i]->m_pIndices;
+					level[i]->m_pIndices = NULL;
+				}
+				if (level[i]->m_pMiddleIndices){
+					delete level[i]->m_pMiddleIndices;
+					level[i]->m_pMiddleIndices = NULL;
+				}
+				delete level[i];
+				level[i]=NULL;
+			}
+		}
+		level.clear();
+		std::swap(level,currentLevel);
+		currentLevel.clear();
 	}
 }
 
