@@ -9,9 +9,9 @@
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
-#define _CRTDBG_MAP_ALLOC
-#include <stdlib.h>
-#include <crtdbg.h>
+//#define _CRTDBG_MAP_ALLOC
+//#include <stdlib.h>
+//#include <crtdbg.h>
 
 #include "DXUT.h"
 #include <stdlib.h>
@@ -24,6 +24,8 @@
 #include "DumpMesh.h"
 #include "txAABBConstructor.h"
 #include "Box.h"
+// Include first function draw 
+#include "txFunctionMeshDisplay.h"
 
 // Define the obj file to be read from
 #define MESHFILEPATH L"media\\pawn.obj"
@@ -96,6 +98,8 @@ ID3D10BlendState*					g_TransparentBS;
 
 // AABB Levels
 size_t                              g_CurrentAABBLevel;
+
+txFunctionMeshDisplay*              g_FunctionDraw;
 //--------------------------------------------------------------------------------------
 // Structures
 //--------------------------------------------------------------------------------------
@@ -142,10 +146,6 @@ void RenderText();
 void RenderSubset( UINT iSubset );
 
 void LoadRasterizerStates( ID3D10Device* pd3dDevice );
-
-// Create a Cube
-void CreateCube(ID3D10Device* pd3dDevice);
-
 
 
 //--------------------------------------------------------------------------------------
@@ -340,6 +340,7 @@ HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* pd3dDevice, const DXGI_SURFA
 	// Construct the mesh 
 	g_AABBConstructor = new txAABBConstructor(pd3dDevice,g_DumpMesh->GetVertexCache(),g_DumpMesh->GetIndexCache());
 
+	g_FunctionDraw = new txFunctionMeshDisplay(pd3dDevice);
 	// Create a cube
 	//CreateCube(pd3dDevice);
 	//g_pBox = new Box();
@@ -473,7 +474,7 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
     // Render the mesh
     //
 	// Stop render the loader mesh
-	bool drawLoaderMesh = false;
+	bool drawLoaderMesh = true;
 	if (drawLoaderMesh) {
 		if ( iCurSubset == -1 )
 		{
@@ -508,6 +509,8 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
 	if (drawAABBLevel){
 		g_AABBConstructor->DrawLevel(g_CurrentAABBLevel);
 	}
+
+	g_FunctionDraw->DrawFunction();
 	
 	//g_AABBConstructor->DrawAllAABBDetial();
 
@@ -654,6 +657,9 @@ void CALLBACK OnD3D10DestroyDevice( void* pUserContext )
 	SAFE_RELEASE(g_TrialCube);
 	delete g_pBox;
 	delete g_AABBConstructor;
+
+	delete g_FunctionDraw;
+	g_FunctionDraw=NULL;
 }
 
 //--------------------------------------------------------------------------------------
@@ -781,74 +787,3 @@ void LoadRasterizerStates( ID3D10Device* pd3dDevice )
 }
 
 
-void CreateCube(ID3D10Device* pD3DDevice)
-{
-	// Define the input layout
-	const D3D10_INPUT_ELEMENT_DESC layout[] =
-	{
-		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D10_INPUT_PER_VERTEX_DATA, 0 },
-		{ "NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 12, D3D10_INPUT_PER_VERTEX_DATA, 0 },
-		{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT, 0, 24, D3D10_INPUT_PER_VERTEX_DATA, 0 },
-	} ;
-
-	    // Create vertex buffer
-    VERTEX vertices[] =
-    {
-        { D3DXVECTOR3( -1.0f, 1.0f, -1.0f ), D3DXVECTOR3( 0.0f, 1.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 0.0f ) },
-        { D3DXVECTOR3( 1.0f, 1.0f, -1.0f ), D3DXVECTOR3( 0.0f, 1.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, 1.0f, 1.0f ), D3DXVECTOR3( 0.0f, 1.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 1.0f )},
-        { D3DXVECTOR3( -1.0f, 1.0f, 1.0f ), D3DXVECTOR3( 0.0f, 1.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 1.0f )},
-
-        { D3DXVECTOR3( -1.0f, -1.0f, -1.0f ), D3DXVECTOR3( 0.0f, -1.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, -1.0f, -1.0f ), D3DXVECTOR3( 0.0f, -1.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, -1.0f, 1.0f ), D3DXVECTOR3( 0.0f, -1.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 1.0f )},
-        { D3DXVECTOR3( -1.0f, -1.0f, 1.0f ), D3DXVECTOR3( 0.0f, -1.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 1.0f ) },
-
-        { D3DXVECTOR3( -1.0f, -1.0f, 1.0f ), D3DXVECTOR3( -1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 0.0f )},
-        { D3DXVECTOR3( -1.0f, -1.0f, -1.0f ), D3DXVECTOR3( -1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 0.0f )},
-        { D3DXVECTOR3( -1.0f, 1.0f, -1.0f ), D3DXVECTOR3( -1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 1.0f )},
-        { D3DXVECTOR3( -1.0f, 1.0f, 1.0f ), D3DXVECTOR3( -1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 1.0f ) },
-
-        { D3DXVECTOR3( 1.0f, -1.0f, 1.0f ), D3DXVECTOR3( 1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, -1.0f, -1.0f ), D3DXVECTOR3( 1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, 1.0f, -1.0f ), D3DXVECTOR3( 1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 1.0f, 1.0f )},
-        { D3DXVECTOR3( 1.0f, 1.0f, 1.0f ), D3DXVECTOR3( 1.0f, 0.0f, 0.0f ) ,D3DXVECTOR2( 0.0f, 1.0f )},
-
-        { D3DXVECTOR3( -1.0f, -1.0f, -1.0f ), D3DXVECTOR3( 0.0f, 0.0f, -1.0f ) ,D3DXVECTOR2( 0.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, -1.0f, -1.0f ), D3DXVECTOR3( 0.0f, 0.0f, -1.0f ) ,D3DXVECTOR2( 1.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, 1.0f, -1.0f ), D3DXVECTOR3( 0.0f, 0.0f, -1.0f ) ,D3DXVECTOR2( 1.0f, 1.0f )},
-        { D3DXVECTOR3( -1.0f, 1.0f, -1.0f ), D3DXVECTOR3( 0.0f, 0.0f, -1.0f ) ,D3DXVECTOR2( 0.0f, 1.0f )},
-
-        { D3DXVECTOR3( -1.0f, -1.0f, 1.0f ), D3DXVECTOR3( 0.0f, 0.0f, 1.0f ) ,D3DXVECTOR2( 0.0f, 0.0f ) },
-        { D3DXVECTOR3( 1.0f, -1.0f, 1.0f ), D3DXVECTOR3( 0.0f, 0.0f, 1.0f ) ,D3DXVECTOR2( 1.0f, 0.0f )},
-        { D3DXVECTOR3( 1.0f, 1.0f, 1.0f ), D3DXVECTOR3( 0.0f, 0.0f, 1.0f ) ,D3DXVECTOR2( 1.0f, 1.0f )},
-        { D3DXVECTOR3( -1.0f, 1.0f, 1.0f ), D3DXVECTOR3( 0.0f, 0.0f, 1.0f ) ,D3DXVECTOR2( 0.0f, 1.0f )},
-    };
-
-	// Set vertex buffer
-    //UINT stride = sizeof( SimpleVertex );
-    //UINT offset = 0;
-    //g_pImmediateContext->IASetVertexBuffers( 0, 1, &g_pVertexBuffer, &stride, &offset );
-
-	//create indexes for a cube
-	unsigned int i[36] = { 	2,0,3,3,1,0,
-							3,1,7,7,5,1,
-							6,4,2,2,0,4,
-							7,5,6,6,4,5,
-							0,4,1,1,5,4,
-							6,2,7,7,3,2 };
-
-	UINT numElements_layout = sizeof(layout)/sizeof(layout[0]);
-	UINT numVertices = sizeof(vertices)/sizeof(vertices[0]);
-	UINT numFaces = sizeof(i)/sizeof(i[0]);
-
-	if ( FAILED( D3DX10CreateMesh( pD3DDevice, layout, numElements_layout, layout[0].SemanticName, 24, 12, D3DX10_MESH_32_BIT, &g_TrialCube) ) ) 
-		return assert(true);//fatalError("Could not create mesh!");
-
-
-
-	//insert data into mesh and commit changes
-	g_TrialCube->SetVertexData(0, vertices);
-	g_TrialCube->SetIndexData(i, 36);
-	g_TrialCube->CommitToDevice();
-}
