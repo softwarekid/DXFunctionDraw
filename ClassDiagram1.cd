@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DXUTLock" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DXUTState" Collapsed="true">
+    <Position X="35.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAgAACAAAAAAAAABAAEAAAAQAABAAAAE=</HashCode>
+      <FileName>DXUT\Core\DXUT.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DXUTMemoryHelper" Collapsed="true">
+    <Position X="30.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>DXUT\Core\DXUT.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DXUTMemoryHelperD3D9Enum" Collapsed="true">
+    <Position X="33.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DXUTMemoryHelperD3D10Enum" Collapsed="true">
+    <Position X="32" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3D9Enumeration" Collapsed="true">
+    <Position X="39" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAAuwAJAAABIAAAAEAoowABCoEBIRoABBgrAIQEAgY=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3D9EnumAdapterInfo" Collapsed="true">
+    <Position X="35.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAABAAgAAABAAAAAAAAAAASAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3D9EnumDeviceInfo" Collapsed="true">
+    <Position X="37.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAQCAAAAAAAAAAAAAAAAAAAAAAABAAAAAAABAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3D10Enumeration" Collapsed="true">
+    <Position X="32" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAAUQApAIABIEAAAEEggwQECIABARIABAIoAIQAAgA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3D10EnumAdapterInfo" Collapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAQAAAAAAAAAAAAABAAAAAAJAAIAAAAgAAABBAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3D10EnumOutputInfo" Collapsed="true">
+    <Position X="33.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAgAAIAAAAAAAAAAAAAAAgQAIQAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3D10EnumDeviceInfo" Collapsed="true">
+    <Position X="30.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CGrowableArray&lt;TYPE&gt;" Collapsed="true">
+    <Position X="37.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEIAAEAAEAAABFCgAEAIFAAAAAMAAAAAIAAoACAQAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTTimer" Collapsed="true">
+    <Position X="33.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAIACAEBAAAEUAgBAAAAAAAEAEEIAAAABCAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTPerfEventGenerator" Collapsed="true">
+    <Position X="39" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3DArcBall" Collapsed="true">
+    <Position X="40.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCQggAAACkAABAAAgAMESAAQAgAAYAIASCAJgAoAIgA=</HashCode>
+      <FileName>DXUT\Optional\DXUTcamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBaseCamera" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QWMkoEAAAFYoBoFFCgBASgTiECDRCABhQAmgTkUBIBg=</HashCode>
+      <FileName>DXUT\Optional\DXUTcamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFirstPersonCamera" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAEAEAAiAAABIAAQAAAAAAABAAAAAAAAQAAAIAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTcamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CModelViewerCamera" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wmAAAAABFCQABUQACAAEAAAAAICEAAAAAIgCAAqQ4QA=</HashCode>
+      <FileName>DXUT\Optional\DXUTcamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTDirectionWidget" Collapsed="true">
+    <Position X="33.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hCCAECAggCAFOEEIIAAEcAAAAAAAQRACBJCQMBiBAAQ=</HashCode>
+      <FileName>DXUT\Optional\DXUTcamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTElement" Collapsed="true">
+    <Position X="35.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAIAABAAAAEAAAAAAiAACAAAAAAAAAAAAgAgAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTDialog" Collapsed="true">
+    <Position X="30.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>7YIkJvojUELIc1spAAAIiMTweDgKIAyyAcjqIOADTqw=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTDialogResourceManager" Collapsed="true">
+    <Position X="32" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAHAAAgRAgBAEIiAAgBwEEEAAAAEgAAUAI0AQLQgAAI=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTControl" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIIoEYkIBoAcBBAgxIgAAAQAAAAAWgANAEACQogZI=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTStatic" Collapsed="true">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIgAIAoAAAAAAAAAAAAAAABAAAAAAABA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTButton" Collapsed="true">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEIAAAAAAAABAAAAEAAAAAAAAABAAAAQAARA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTCheckBox" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAACIIAAAAAAAAQAAABAAEAAAAAAAhAAAAQAIRA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTRadioButton" Collapsed="true">
+    <Position X="12.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAAABAAEAABAAAAgAAAAQEAQA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTScrollBar" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAIAADCIIQAkCAAQAQAAAARAAAAACEAQZEpAAAAIQA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTListBox" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBAWARIQIwgAECAJARAAAQAkAAABAQEApQIAQAAYQA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTComboBox" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABIUIBAQIwABcAAAARAAAAAkAAAFAxGgBAJISQAJQA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTSlider" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAAAIIAwAgAAABRAAAAEACQAAIAAAhiAAAEAARA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUniBuffer" Collapsed="true">
+    <Position X="40.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhUQEAAQgQoAAwAACqYYAAAxACEADQAABQwAABBAgBg=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTEditBox" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAQAIQISIgAOAIIAKRCAkRERAAEIBAAkNiAIgEAJQA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CD3DSettingsDlg" Collapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SgmIUILAjDVTJXogUkm6JG0QDKEDopCcgMRHIZ0UUBI=</HashCode>
+      <FileName>DXUT\Optional\DXUTsettingsdlg.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTSDKMesh" Collapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACsFcBDzCcFS0kZgOASAEoguiBByUgPCTYAAEgGhDI=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTXFileMesh" Collapsed="true">
+    <Position X="35.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAEKAAAAEBBAAAQgAEAAEIAABAAEBAABACBAQgQCA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTResourceCache" Collapsed="true">
+    <Position X="40.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEAAAAAADAAwIAABABCAAEBAEAMICAAAYAQCBAQIAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTTextHelper" Collapsed="true">
+    <Position X="32" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABKAABAAAAIAhAAACAAFAAAAAAAEEAABAIACoAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTLineManager" Collapsed="true">
+    <Position X="37.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABgAAAAAAAAAkABACAQAAAAAYEQAAAAAAAAgIAAAAQA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDXUTStack&lt;T&gt;" Collapsed="true">
+    <Position X="30.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAIAQAABAAAAAAgACAAAKAAAAAACABAAAACAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMeshLoader10" Collapsed="true">
+    <Position X="39" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>INAAAEAAJAEBAQAAAAAUAABAkABAAWCAAAAEACBAQEA=</HashCode>
+      <FileName>MeshLoader10.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="DXUT_TIMER" Collapsed="true">
+    <Position X="30.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAQAAAAAAgAAAAgEAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="D3D10_COUNTERS" Collapsed="true">
+    <Position X="35.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAAAAAAAAAEAAAAIAAAAKAAgAIEFBEQACAAQAAM=</HashCode>
+      <FileName>DXUT\Core\DXUT.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUT_SCREEN_VERTEX" Collapsed="true">
+    <Position X="39" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAACARABgAQAAAQA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUT_SCREEN_VERTEX_UNTEX" Collapsed="true">
+    <Position X="28.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACARABgAQAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUT_SCREEN_VERTEX_10" Collapsed="true">
+    <Position X="40.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAACAAABgAQAAAQA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTD3D9DeviceSettings" Collapsed="true">
+    <Position X="28.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQACAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTD3D10DeviceSettings" Collapsed="true">
+    <Position X="40.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQACCAAAAAAAAAIAQAAAAAAAAQAAAAQAABAAAg=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTDeviceSettings" Collapsed="true">
+    <Position X="30.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTMatchOptions" Collapsed="true">
+    <Position X="37.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAACBAEAQAAAAQAgwAAAAABACgAFAICAAAAAAE=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CD3D9EnumDeviceSettingsCombo" Collapsed="true">
+    <Position X="32" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAQJAIQBAEAAAARAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CD3D9EnumDSMSConflict" Collapsed="true">
+    <Position X="33.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CD3D10EnumDeviceSettingsCombo" Collapsed="true">
+    <Position X="30.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAQIAIQAAAAAAAQIACAEAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUT_GAMEPAD" Collapsed="true">
+    <Position X="37.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGBAAAAFAEgBAgAAAAAAAAAgAAAIAAAAKAJABRARAAE=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tagMONITORINFO" Collapsed="true">
+    <Position X="23" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="tagMONITORINFOEXW" Collapsed="true">
+    <Position X="23" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTBlendColor" Collapsed="true">
+    <Position X="32" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAEAAAAACBAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTTextureNode" Collapsed="true">
+    <Position X="39" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAEACAAAAAMAQAAACAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTFontNode" Collapsed="true">
+    <Position X="33.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAABAAAAAAAAAAAACIAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTElementHolder" Collapsed="true">
+    <Position X="32" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAgAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTListBoxItem" Collapsed="true">
+    <Position X="35.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAAAAAAAAAgAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTComboBoxItem" Collapsed="true">
+    <Position X="39" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_HEADER" Collapsed="true">
+    <Position X="39" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KIAQAACgAAQAgAAJBAQAAgAQAAAAAQAAAEAAAAAAAEA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_VERTEX_BUFFER_HEADER" Collapsed="true">
+    <Position X="33.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAIIAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_INDEX_BUFFER_HEADER" Collapsed="true">
+    <Position X="40.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_MESH" Collapsed="true">
+    <Position X="30.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAACAAAEAQAAAAAAwAAACAAAAAAAEA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_SUBSET" Collapsed="true">
+    <Position X="32" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAABAAAAAAAAAUAASAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_FRAME" Collapsed="true">
+    <Position X="37.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAABAAACQAAAAgAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_MATERIAL" Collapsed="true">
+    <Position X="28.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAgQAgQEAAAAgAAAAQAAAAAAAABAAAAAEAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKANIMATION_FILE_HEADER" Collapsed="true">
+    <Position X="30.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEgI=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKANIMATION_DATA" Collapsed="true">
+    <Position X="28.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKANIMATION_FRAME_DATA" Collapsed="true">
+    <Position X="32" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_CALLBACKS9" Collapsed="true">
+    <Position X="35.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABQAAAAAAAAAAAABAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SDKMESH_CALLBACKS10" Collapsed="true">
+    <Position X="33.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABQAAAAAAAAAAAABAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTCache_Texture" Collapsed="true">
+    <Position X="37.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAACCAAABAIAAEAAAAQAACAgAAAABAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTCache_Font" Collapsed="true">
+    <Position X="35.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DXUTCache_Effect" Collapsed="true">
+    <Position X="33.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAACAAAAAIAAAEAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="VERTEX" Collapsed="true">
+    <Position X="35.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAgAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>MeshLoader10.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CacheEntry" Collapsed="true">
+    <Position X="28.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>MeshLoader10.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Material" Collapsed="true">
+    <Position X="40.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAAAAQAAEAAAEAQAAgAAAEQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>MeshLoader10.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="LPDIRECT3DCREATE9" Collapsed="true">
+    <Position X="30.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3DPERF_BEGINEVENT" Collapsed="true">
+    <Position X="32" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3DPERF_ENDEVENT" Collapsed="true">
+    <Position X="33.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3DPERF_SETMARKER" Collapsed="true">
+    <Position X="39" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3DPERF_SETREGION" Collapsed="true">
+    <Position X="28.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3DPERF_QUERYREPEATFRAME" Collapsed="true">
+    <Position X="37.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3DPERF_SETOPTIONS" Collapsed="true">
+    <Position X="40.75" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3DPERF_GETSTATUS" Collapsed="true">
+    <Position X="35.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCREATEDXGIFACTORY" Collapsed="true">
+    <Position X="28.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10CREATEDEVICE" Collapsed="true">
+    <Position X="40.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10CREATEDEVICE1" Collapsed="true">
+    <Position X="28.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10CREATESTATEBLOCK" Collapsed="true">
+    <Position X="30.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKUNION" Collapsed="true">
+    <Position X="30.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKINTERSECT" Collapsed="true">
+    <Position X="28.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKDIFFERENCE" Collapsed="true">
+    <Position X="32" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKENABLECAPTURE" Collapsed="true">
+    <Position X="39" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKDISABLECAPTURE" Collapsed="true">
+    <Position X="35.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKENABLEALL" Collapsed="true">
+    <Position X="37.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKDISABLEALL" Collapsed="true">
+    <Position X="33.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPD3D10STATEBLOCKMASKGETSETTING" Collapsed="true">
+    <Position X="40.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPMONITORFROMWINDOW" Collapsed="true">
+    <Position X="40.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPGETMONITORINFO" Collapsed="true">
+    <Position X="37.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPMONITORFROMRECT" Collapsed="true">
+    <Position X="39" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPXINPUTGETSTATE" Collapsed="true">
+    <Position X="32" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPXINPUTSETSTATE" Collapsed="true">
+    <Position X="33.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPXINPUTGETCAPABILITIES" Collapsed="true">
+    <Position X="30.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPXINPUTENABLE" Collapsed="true">
+    <Position X="28.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKFRAMEMOVE" Collapsed="true">
+    <Position X="37.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKKEYBOARD" Collapsed="true">
+    <Position X="28.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKMOUSE" Collapsed="true">
+    <Position X="32" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKMSGPROC" Collapsed="true">
+    <Position X="33.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKTIMER" Collapsed="true">
+    <Position X="35.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKMODIFYDEVICESETTINGS" Collapsed="true">
+    <Position X="30.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKDEVICEREMOVED" Collapsed="true">
+    <Position X="35.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKISD3D9DEVICEACCEPTABLE" Collapsed="true">
+    <Position X="40.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D9DEVICECREATED" Collapsed="true">
+    <Position X="40.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D9DEVICERESET" Collapsed="true">
+    <Position X="32" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D9FRAMERENDER" Collapsed="true">
+    <Position X="33.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D9DEVICELOST" Collapsed="true">
+    <Position X="30.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D9DEVICEDESTROYED" Collapsed="true">
+    <Position X="28.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKISD3D10DEVICEACCEPTABLE" Collapsed="true">
+    <Position X="39" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D10DEVICECREATED" Collapsed="true">
+    <Position X="32" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D10SWAPCHAINRESIZED" Collapsed="true">
+    <Position X="39" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D10FRAMERENDER" Collapsed="true">
+    <Position X="35.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D10SWAPCHAINRELEASING" Collapsed="true">
+    <Position X="37.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPDXUTCALLBACKD3D10DEVICEDESTROYED" Collapsed="true">
+    <Position X="33.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MONITORINFO" Collapsed="true">
+    <Position X="23" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPMONITORINFO" Collapsed="true">
+    <Position X="26" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MONITORINFOEXW" Collapsed="true">
+    <Position X="20" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPMONITORINFOEXW" Collapsed="true">
+    <Position X="23" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MONITORINFOEX" Collapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPMONITORINFOEX" Collapsed="true">
+    <Position X="23" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTmisc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PCALLBACKDXUTGUIEVENT" Collapsed="true">
+    <Position X="35.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCREATETEXTUREFROMFILE9" Collapsed="true">
+    <Position X="35.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCREATEVERTEXBUFFER9" Collapsed="true">
+    <Position X="39" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCREATEINDEXBUFFER9" Collapsed="true">
+    <Position X="32" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCREATETEXTUREFROMFILE10" Collapsed="true">
+    <Position X="33.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCREATEVERTEXBUFFER10" Collapsed="true">
+    <Position X="37.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LPCREATEINDEXBUFFER10" Collapsed="true">
+    <Position X="30.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="DXUTDeviceVersion" Collapsed="true">
+    <Position X="37.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Core\DXUT.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DXUT_MATCH_TYPE" Collapsed="true">
+    <Position X="33.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAACAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>DXUT\Core\DXUTenum.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="D3DUtil_CameraKeys" Collapsed="true">
+    <Position X="28.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIAAAAAAAAAAABQABCAAAQAAAAGAAQAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTcamera.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DXUT_CONTROL_TYPE" Collapsed="true">
+    <Position X="32" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAACAAAAAEAAAAAAAEAAIIABEAABAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DXUT_CONTROL_STATE" Collapsed="true">
+    <Position X="30.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAgAIAQAQIAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\DXUTgui.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SDKMESH_PRIMITIVE_TYPE" Collapsed="true">
+    <Position X="28.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAAAAAAASCAAAAAJAAAAAAAAAAAAAAAAQAEAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SDKMESH_INDEX_TYPE" Collapsed="true">
+    <Position X="40.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FRAME_TRANSFORM_TYPE" Collapsed="true">
+    <Position X="39" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DXUT\Optional\SDKmesh.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DXUTCACHE_SOURCELOCATION" Collapsed="true">
+    <Position X="35.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>DXUT\Optional\SDKmisc.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

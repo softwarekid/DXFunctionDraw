@@ -43,7 +43,7 @@ typedef struct txBoundingBoxNode
 	txBoundingBoxNode *left;
 	txBoundingBoxNode *right;
 }txBoundingBoxNode;
-
+ 
 class txAABBConstructor
 {
 public:
