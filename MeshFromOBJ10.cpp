@@ -29,6 +29,7 @@
 #include "FunctionDrawor.h"
 #include "FunctionUVBase.h"
 #include "UVFunctionZoo.h"
+#include "UVSurfaceImport.h"
 
 // Define the obj file to be read from
 #define MESHFILEPATH L"media\\pawn.obj"
@@ -107,6 +108,8 @@ txFunctionMeshDisplay*              g_FunctionDraw;
 // UV function surface draw
 txFunctionUVBase                   *g_Parabola = NULL;
 txFunctionDrawor                   *g_ParabolaDis = NULL;
+txUVSurfaceImport                  *g_UVImport = NULL;
+txFunctionDrawor                   *g_UVFileDisp = NULL;
 
 //--------------------------------------------------------------------------------------
 // Structures
@@ -359,6 +362,11 @@ HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* pd3dDevice, const DXGI_SURFA
 	//g_Parabola->Discrete(txUVFunctionZoo::Parabola);
 	//g_ParabolaDis = new txFunctionDrawor(g_Parabola->GetVList(), g_Parabola->M(), g_Parabola->N(),pd3dDevice);
 
+	g_UVImport = new txUVSurfaceImport();
+	g_UVImport->ConstructSurfaceFromFile("D:\\data\\screwsurface.xyz");
+	g_UVFileDisp = new txFunctionDrawor(g_UVImport->GetVList(), g_UVImport->M(), g_UVImport->N(),pd3dDevice);
+
+
 	const size_t AABBLevelCount = g_AABBConstructor->GetAABBLevelCount();
 	// Add the AABB Levels
     CDXUTComboBox* pLevelComboBox = g_SampleUI.GetComboBox( IDC_AABBSUBLEVEL );
@@ -524,7 +532,7 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
 
 	// g_FunctionDraw->DrawFunction();
 	// g_ParabolaDis->Draw();
-	
+	g_UVFileDisp->Draw();
 	//g_AABBConstructor->DrawAllAABBDetial();
 
 	//
@@ -685,6 +693,18 @@ void CALLBACK OnD3D10DestroyDevice( void* pUserContext )
 	{
 		delete g_ParabolaDis;
 		g_ParabolaDis = NULL;
+	}
+
+	if (!g_UVImport)
+	{
+		delete g_UVImport;
+		g_UVImport = NULL;
+	}
+
+	if (!g_UVFileDisp)
+	{
+		delete g_UVFileDisp;
+		g_UVFileDisp = NULL;
 	}
 }
 

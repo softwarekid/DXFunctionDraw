@@ -85,6 +85,7 @@
     <ClCompile Include="FunctionDrawor.cpp" />
     <ClCompile Include="FunctionUVBase.cpp" />
     <ClCompile Include="UVFunctionZoo.cpp" />
+    <ClCompile Include="UVSurfaceImport.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MeshFromOBJ10.fx">
@@ -107,6 +108,7 @@
     <ClInclude Include="FunctionDrawor.h" />
     <ClInclude Include="FunctionUVBase.h" />
     <ClInclude Include="UVFunctionZoo.h" />
+    <ClInclude Include="UVSurfaceImport.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

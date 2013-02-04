@@ -10,6 +10,8 @@ txFunctionDrawor::txFunctionDrawor(const std::vector<D3DXVECTOR3> &vlist_, int m
 	, m_M(m_)
 {
 	assert(pD3DDevice);
+	assert(m_);
+	assert(n_);
 	m_pD3DDevice = pD3DDevice;
 
 	m_NumVertices = (m_M-1)*(m_N-1)*6;
