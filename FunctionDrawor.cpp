@@ -1,70 +1,58 @@
 #include "DXUT.h"
-#include "txFunctionMeshDisplay.h"
 #include "d3dUtil.h"
-#include <vector>
-#include "Vertex.h"
-#include "Box.h"
+#include "FunctionDrawor.h"
+#include <assert.h>
 
-txFunctionMeshDisplay::txFunctionMeshDisplay(ID3D10Device* pD3DDevice)
-	:md3dDevice(pD3DDevice)
+
+txFunctionDrawor::txFunctionDrawor(const std::vector<D3DXVECTOR3> &vlist_, int m_, int n_, ID3D10Device* pD3DDevice)
+	: m_Vlist(vlist_)
+	, m_N(n_)
+	, m_M(m_)
 {
-	m_DebugBox = new Box();
-	init();
+	assert(pD3DDevice);
+	m_pD3DDevice = pD3DDevice;
+
+	m_NumVertices = (m_M-1)*(m_N-1)*6;
+	m_NumFaces = (m_M-1)*(m_N-1)*2; // quadrilateral consists by two triangle faces
+
+	ConstructDrawBuffer();
 }
 
 
-txFunctionMeshDisplay::~txFunctionMeshDisplay(void)
+txFunctionDrawor::~txFunctionDrawor(void)
 {
 	ReleaseCOM(mVB);
 	ReleaseCOM(mIB);
-	delete m_DebugBox;
-	m_DebugBox = NULL;
 }
 
-void txFunctionMeshDisplay::init(FLOAT xMin,  FLOAT xMax, DWORD xGridCount,
-	FLOAT yMin, FLOAT yMax, DWORD yGridCount
-	// Need to add a call back function to calculate z
-	)
+void txFunctionDrawor::ConstructDrawBuffer()
 {
-	m_XMin = xMin;
-	m_XMax = xMax;
-	m_XGridCount = xGridCount;
-	m_YMin = yMin;
-	m_YMax = yMax;
-	m_YGridCount = yGridCount;
-
-	D3DXVECTOR3 maxAABB(m_XMin,m_YMin,0);
-	D3DXVECTOR3 minAABB(m_XMax,m_YMax,CalculateZ(m_XMin,m_YMin));
-	m_DebugBox->customizeInit(md3dDevice,minAABB,maxAABB);
 
 	D3DXVECTOR2 tempTec(0.0f,0.0f);
-	// calculate z
-	FLOAT x = m_XMin;
-	FLOAT y = m_YMin;
-	FLOAT deltaX = (m_XMax - m_XMin)/m_XGridCount;
-	FLOAT deltaY = (m_YMax - m_YMin)/m_YGridCount;
-	m_NumVertices = (xGridCount-1)*(yGridCount-1)*6;
-	m_NumFaces = (xGridCount-1)*(yGridCount-1)*2;
-	std::vector<Vertex> verticesBuffer((xGridCount-1)*(yGridCount-1)*6);
+
+	std::vector<Vertex> verticesBuffer(m_NumFaces*3);
 	std::vector<DWORD> indexBuffer;
-	indexBuffer.reserve((xGridCount-1)*(yGridCount-1)*6);
+	indexBuffer.reserve(m_NumFaces*3);
+
 	D3DXVECTOR3 p0,p1,p2,p3;
 	D3DXVECTOR3 normal0;
 	D3DXVECTOR3 normal1;
 	D3DXVECTOR3 r0;
 	D3DXVECTOR3 r1;
 	D3DXVECTOR3 r2;
+
+
 	DWORD meshIndex=0;
+	for (int i=0; i<m_N-1; i++)
+	{
+		for (int j=0; j<m_M-1; j++)
+		{
+			
+			p0 = m_Vlist[i*m_M+j];
+			p1 = m_Vlist[i*m_M+j+1];
+			p2 = m_Vlist[(i+1)*m_M+j+1];
+			p3 = m_Vlist[(i+1)*m_M+j];
 
-
-	for (DWORD i=0; i<m_YGridCount-1; i++){
-		x=m_XMin;
-		for (DWORD j=0; j<(m_XGridCount-1)*6; j+=6){
-			meshIndex = i*(m_YGridCount-1)*6+j;
-			p0=D3DXVECTOR3(x,y,CalculateZ(x,y));
-			p1=D3DXVECTOR3(x+deltaX,y,CalculateZ(x+deltaX,y));
-			p2=D3DXVECTOR3(x+deltaX,y+deltaY,CalculateZ(x+deltaX,y+deltaY));
-			p3=D3DXVECTOR3(x,y+deltaY,CalculateZ(x,y+deltaY));
 			r0 = p3-p0;
 			r1 = p2-p0;
 			r2 = p1-p0;
@@ -97,10 +85,12 @@ void txFunctionMeshDisplay::init(FLOAT xMin,  FLOAT xMax, DWORD xGridCount,
 			verticesBuffer[meshIndex+5].normal = normal0;
 			verticesBuffer[meshIndex+5].texC = tempTec;
 			indexBuffer.push_back(meshIndex+5);
-			x+=deltaX;
+
+
+			meshIndex+=6;
 		}
-		y+=deltaY;
 	}
+
 
 	// Set vertex buffer
 	D3D10_BUFFER_DESC vbd;
@@ -111,7 +101,7 @@ void txFunctionMeshDisplay::init(FLOAT xMin,  FLOAT xMax, DWORD xGridCount,
     vbd.MiscFlags = 0;
     D3D10_SUBRESOURCE_DATA vinitData;
     vinitData.pSysMem = &verticesBuffer[0];
-    HR(md3dDevice->CreateBuffer(&vbd, &vinitData, &mVB));
+    HR(m_pD3DDevice->CreateBuffer(&vbd, &vinitData, &mVB));
 
 	D3D10_BUFFER_DESC ibd;
     ibd.Usage = D3D10_USAGE_IMMUTABLE;
@@ -121,27 +111,15 @@ void txFunctionMeshDisplay::init(FLOAT xMin,  FLOAT xMax, DWORD xGridCount,
     ibd.MiscFlags = 0;
     D3D10_SUBRESOURCE_DATA iinitData;
     iinitData.pSysMem = &indexBuffer[0];
-    HR(md3dDevice->CreateBuffer(&ibd, &iinitData, &mIB));
-	
-
+    HR(m_pD3DDevice->CreateBuffer(&ibd, &iinitData, &mIB));
 }
 
-FLOAT txFunctionMeshDisplay::CalculateZ(FLOAT x, FLOAT y)
+
+void txFunctionDrawor::Draw()
 {
-	return x*x + y*y;
-}
-
-void txFunctionMeshDisplay::DrawFunction(){
 	UINT stride = sizeof(Vertex);
 	UINT offset = 0;
-	md3dDevice->IASetVertexBuffers(0,1,&mVB,&stride,&offset);
-	md3dDevice->IASetIndexBuffer(mIB, DXGI_FORMAT_R32_UINT, 0);
-	md3dDevice->DrawIndexed(m_NumFaces*3,0,0);
-
-	//m_DebugBox->draw();
+	m_pD3DDevice->IASetVertexBuffers(0,1,&mVB,&stride,&offset);
+	m_pD3DDevice->IASetIndexBuffer(mIB, DXGI_FORMAT_R32_UINT, 0);
+	m_pD3DDevice->DrawIndexed(m_NumFaces*3,0,0);
 }
-
-void txFunctionMeshDisplay::DrawBoundingBox(){
-	m_DebugBox->draw();
-}
-

@@ -26,6 +26,9 @@
 #include "Box.h"
 // Include first function draw 
 #include "txFunctionMeshDisplay.h"
+#include "FunctionDrawor.h"
+#include "FunctionUVBase.h"
+#include "UVFunctionZoo.h"
 
 // Define the obj file to be read from
 #define MESHFILEPATH L"media\\pawn.obj"
@@ -100,6 +103,11 @@ ID3D10BlendState*					g_TransparentBS;
 size_t                              g_CurrentAABBLevel;
 
 txFunctionMeshDisplay*              g_FunctionDraw;
+
+// UV function surface draw
+txFunctionUVBase                   *g_Parabola = NULL;
+txFunctionDrawor                   *g_ParabolaDis = NULL;
+
 //--------------------------------------------------------------------------------------
 // Structures
 //--------------------------------------------------------------------------------------
@@ -347,6 +355,10 @@ HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* pd3dDevice, const DXGI_SURFA
 	//g_pBox->init(pd3dDevice, 1.0f);
 	//g_pBox->customizeInit(pd3dDevice, D3DXVECTOR3(0.0f,0.0f,0.0f),D3DXVECTOR3(1.0f,1.0f,1.0f));
 
+	//g_Parabola = new txFunctionUVBase(-2.0,2.0,-2.0,2.0,1000,3000);
+	//g_Parabola->Discrete(txUVFunctionZoo::Parabola);
+	//g_ParabolaDis = new txFunctionDrawor(g_Parabola->GetVList(), g_Parabola->M(), g_Parabola->N(),pd3dDevice);
+
 	const size_t AABBLevelCount = g_AABBConstructor->GetAABBLevelCount();
 	// Add the AABB Levels
     CDXUTComboBox* pLevelComboBox = g_SampleUI.GetComboBox( IDC_AABBSUBLEVEL );
@@ -510,7 +522,8 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
 		g_AABBConstructor->DrawLevel(g_CurrentAABBLevel);
 	}
 
-	g_FunctionDraw->DrawFunction();
+	// g_FunctionDraw->DrawFunction();
+	// g_ParabolaDis->Draw();
 	
 	//g_AABBConstructor->DrawAllAABBDetial();
 
@@ -660,6 +673,19 @@ void CALLBACK OnD3D10DestroyDevice( void* pUserContext )
 
 	delete g_FunctionDraw;
 	g_FunctionDraw=NULL;
+
+	if (!g_Parabola)
+	{
+		delete g_Parabola;
+		g_Parabola = NULL;
+	}
+	
+	
+	if (!g_ParabolaDis)
+	{
+		delete g_ParabolaDis;
+		g_ParabolaDis = NULL;
+	}
 }
 
 //--------------------------------------------------------------------------------------

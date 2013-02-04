@@ -379,11 +379,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="FunctionDrawor.cpp" />
+    <ClCompile Include="FunctionUVBase.cpp" />
     <ClCompile Include="txAABBConstructor.cpp" />
     <ClCompile Include="txFunctionMeshDisplay.cpp" />
+    <ClCompile Include="UVFunctionZoo.cpp" />
     <ClInclude Include="Box.h" />
+    <ClInclude Include="FunctionDrawor.h" />
+    <ClInclude Include="FunctionUVBase.h" />
     <ClInclude Include="txAABBConstructor.h" />
     <ClInclude Include="txFunctionMeshDisplay.h" />
+    <ClInclude Include="UVFunctionZoo.h" />
     <ClInclude Include="Vertex.h" />
     <None Include="ClassDiagram1.cd" />
     <None Include="DXUT\Optional\directx.ico" />

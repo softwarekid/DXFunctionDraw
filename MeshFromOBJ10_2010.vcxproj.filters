@@ -82,6 +82,9 @@
     <ClCompile Include="txAABBConstructor.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="txFunctionMeshDisplay.cpp" />
+    <ClCompile Include="FunctionDrawor.cpp" />
+    <ClCompile Include="FunctionUVBase.cpp" />
+    <ClCompile Include="UVFunctionZoo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MeshFromOBJ10.fx">
@@ -101,6 +104,9 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="Vertex.h" />
     <ClInclude Include="txFunctionMeshDisplay.h" />
+    <ClInclude Include="FunctionDrawor.h" />
+    <ClInclude Include="FunctionUVBase.h" />
+    <ClInclude Include="UVFunctionZoo.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
