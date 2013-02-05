@@ -386,6 +386,7 @@
     <ClCompile Include="UVFunctionZoo.cpp" />
     <ClCompile Include="UVSurfaceImport.cpp" />
     <ClInclude Include="Box.h" />
+    <ClInclude Include="dxconvertor.h" />
     <ClInclude Include="FunctionDrawor.h" />
     <ClInclude Include="FunctionUVBase.h" />
     <ClInclude Include="txAABBConstructor.h" />
@@ -433,6 +434,15 @@
     <ResourceCompile Include="MeshFromOBJ10.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\contactwrapper\contactwrapper.vcxproj">
+      <Project>{91ba165c-4440-443b-8421-21835eb50f35}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GeometryUtility\GeometryUtility.vcxproj">
+      <Project>{d32b2c11-7c64-4d8b-940f-a56d9e4da10b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Opcode\Opcode.vcxproj">
+      <Project>{ca6cd99c-a12e-b3c0-e745-684defab3b7e}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

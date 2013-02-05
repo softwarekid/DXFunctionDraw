@@ -109,6 +109,7 @@
     <ClInclude Include="FunctionUVBase.h" />
     <ClInclude Include="UVFunctionZoo.h" />
     <ClInclude Include="UVSurfaceImport.h" />
+    <ClInclude Include="dxconvertor.h" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

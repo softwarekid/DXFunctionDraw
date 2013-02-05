@@ -2,6 +2,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MeshFromOBJ10", "MeshFromOBJ10_2010.vcxproj", "{D3D10110-96D0-4629-88B8-122C0256058C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Opcode", "..\Opcode\Opcode.vcxproj", "{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "contactwrapper", "..\contactwrapper\contactwrapper.vcxproj", "{91BA165C-4440-443B-8421-21835EB50F35}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeometryUtility", "..\GeometryUtility\GeometryUtility.vcxproj", "{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -24,6 +30,33 @@ Global
 		{D3D10110-96D0-4629-88B8-122C0256058C}.Release|Win32.Build.0 = Release|Win32
 		{D3D10110-96D0-4629-88B8-122C0256058C}.Release|x64.ActiveCfg = Release|x64
 		{D3D10110-96D0-4629-88B8-122C0256058C}.Release|x64.Build.0 = Release|x64
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Debug|Win32.Build.0 = Debug|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Debug|x64.ActiveCfg = Debug|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Profile|Win32.ActiveCfg = Release|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Profile|Win32.Build.0 = Release|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Profile|x64.ActiveCfg = Release|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Release|Win32.ActiveCfg = Release|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Release|Win32.Build.0 = Release|Win32
+		{CA6CD99C-A12E-B3C0-E745-684DEFAB3B7E}.Release|x64.ActiveCfg = Release|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Debug|Win32.ActiveCfg = Debug|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Debug|Win32.Build.0 = Debug|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Debug|x64.ActiveCfg = Debug|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Profile|Win32.ActiveCfg = Release|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Profile|Win32.Build.0 = Release|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Profile|x64.ActiveCfg = Release|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Release|Win32.ActiveCfg = Release|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Release|Win32.Build.0 = Release|Win32
+		{91BA165C-4440-443B-8421-21835EB50F35}.Release|x64.ActiveCfg = Release|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Debug|Win32.Build.0 = Debug|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Debug|x64.ActiveCfg = Debug|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Profile|Win32.ActiveCfg = Release|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Profile|Win32.Build.0 = Release|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Profile|x64.ActiveCfg = Release|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Release|Win32.ActiveCfg = Release|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Release|Win32.Build.0 = Release|Win32
+		{D32B2C11-7C64-4D8B-940F-A56D9E4DA10B}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

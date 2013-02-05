@@ -30,6 +30,11 @@
 #include "FunctionUVBase.h"
 #include "UVFunctionZoo.h"
 #include "UVSurfaceImport.h"
+#include "dxconvertor.h"
+#include "../GeometryUtility/surface.h"
+#include "../contactwrapper/ICollisionshapeMesh.h"
+#include "../GeometryUtility/plane.h"
+#include "../contactwrapper/planeCollisionShape.h"
 
 // Define the obj file to be read from
 #define MESHFILEPATH L"media\\pawn.obj"
@@ -358,14 +363,29 @@ HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* pd3dDevice, const DXGI_SURFA
 	//g_pBox->init(pd3dDevice, 1.0f);
 	//g_pBox->customizeInit(pd3dDevice, D3DXVECTOR3(0.0f,0.0f,0.0f),D3DXVECTOR3(1.0f,1.0f,1.0f));
 
-	//g_Parabola = new txFunctionUVBase(-2.0,2.0,-2.0,2.0,1000,3000);
-	//g_Parabola->Discrete(txUVFunctionZoo::Parabola);
-	//g_ParabolaDis = new txFunctionDrawor(g_Parabola->GetVList(), g_Parabola->M(), g_Parabola->N(),pd3dDevice);
+	g_Parabola = new txFunctionUVBase(-2.0,2.0,-2.0,2.0,2,2);
+	g_Parabola->Discrete(txUVFunctionZoo::Parabola);
+	g_ParabolaDis = new txFunctionDrawor(g_Parabola->GetVList(), g_Parabola->M(), g_Parabola->N(),pd3dDevice);
 
-	g_UVImport = new txUVSurfaceImport();
-	g_UVImport->ConstructSurfaceFromFile("D:\\data\\screwsurface.xyz");
-	g_UVFileDisp = new txFunctionDrawor(g_UVImport->GetVList(), g_UVImport->M(), g_UVImport->N(),pd3dDevice);
+	//g_UVImport = new txUVSurfaceImport();
+	//g_UVImport->ConstructSurfaceFromFile("D:\\data\\screwsurface.xyz");
+	//g_UVFileDisp = new txFunctionDrawor(g_UVImport->GetVList(), g_UVImport->M(), g_UVImport->N(),pd3dDevice);
 
+	std::vector<txVec3> temv;
+	D3DXVECTOR32txVec3(g_Parabola->GetVList(),temv);
+
+	txSurface surface(temv, g_Parabola->M(), g_Parabola->N());
+
+	txICollisionshapeMesh meshmodel(surface);
+	meshmodel.Build();
+
+	txPlane plane0(0,0,1,10);
+	std::vector<txPlane> planes;
+	planes.push_back(plane0);
+
+	txPlaneCollisionShape  planecoll(planes);
+
+	planecoll.Collide(meshmodel);
 
 	const size_t AABBLevelCount = g_AABBConstructor->GetAABBLevelCount();
 	// Add the AABB Levels
@@ -531,8 +551,8 @@ void CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float 
 	}
 
 	// g_FunctionDraw->DrawFunction();
-	// g_ParabolaDis->Draw();
-	g_UVFileDisp->Draw();
+	 g_ParabolaDis->Draw();
+	//g_UVFileDisp->Draw();
 	//g_AABBConstructor->DrawAllAABBDetial();
 
 	//
